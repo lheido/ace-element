@@ -1,8 +1,21 @@
 {
-  "name": "ace-element",
-  "private": true,
+  "name": "ace-component",
+  "private": false,
+  "description": "Ace editor element based on triglian/ace-element and PolymerLabs/ace-element",
+  "keywords": [
+    "web-component",
+    "web-components",
+    "polymer",
+    "ace",
+    "code",
+    "editor"
+  ],
+  "main": [
+    "paper-datatable.html",
+    "paper-datatable-card.html"
+  ],
   "dependencies": {
-    "polymer": "Polymer/polymer#^1.0.0"
+    "polymer": "Polymer/polymer#^1.2.0"
   },
   "devDependencies": {
     "iron-component-page": "polymerelements/iron-component-page#~1.0.5"
