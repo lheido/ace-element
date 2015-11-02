@@ -1,6 +1,5 @@
 {
   "name": "ace-component",
-  "private": false,
   "description": "Ace editor element based on triglian/ace-element and PolymerLabs/ace-element",
   "keywords": [
     "web-component",
