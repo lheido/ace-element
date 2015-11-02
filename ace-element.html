@@ -99,6 +99,7 @@
       value: {
         value: null,
         type: String,
+        notify: true,
         reflectToAttribute: true,
         observer: '_valueChanged'
       },
@@ -204,6 +205,7 @@
 
     _valueChanged: function() {
       if (! this.editor) return;
+      if(this.editorValue == this.value) return;
       this.editorValue = this.value;
       this.editor.clearSelection();
       this.editor.resize();
@@ -290,6 +292,7 @@
 
     _editorChangeAction: function() {
       this.fire('editor-input', {value: this.editorValue, oldValue: this._value});
+      this.value = this.editorValue;
     },
 
     /**
@@ -304,7 +307,7 @@
     */
     set editorValue(value) {
       this._value = value;
-      this.editor.setValue(value);
+      this.editor.setValue(value, -1);
     },
 
     /**
