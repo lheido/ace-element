@@ -154,13 +154,21 @@
       this.$.editor.style.fontSize = this.fontSize;
     },
 
+    _setBasePath: function() {
+      if (! this.editor) return;
+      if(!ace.config.get('basePath')) 
+        ace.config.set('basePath', this.resolveUrl('src-min-noconflict/'));
+    },
+
     _modeChanged: function() {
       if (! this.editor) return;
+      this._setBasePath();
       this.editor.getSession().setMode('ace/mode/' + this.mode);
     },
 
     _themeChanged: function() {
       if (! this.editor) return;
+      this._setBasePath();
       this.editor.setTheme('ace/theme/' + this.theme);
       this._whenMatches(document.head, '#ace-' + this.theme, '_applyTheme');
     },
