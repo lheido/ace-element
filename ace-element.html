@@ -49,7 +49,6 @@
       fontSize: {
         value: 12,
         type: Number,
-        reflectToAttribute: true,
         observer: '_fontSizeChanged'
       },
 
@@ -59,7 +58,6 @@
       mode: {
         value: 'javascript',
         type: String,
-        reflectToAttribute: true,
         observer: '_modeChanged'
       },
 
@@ -69,7 +67,6 @@
       readonly: {
         value: false,
         type: Boolean,
-        reflectToAttribute: true,
         observer: '_readonlyChanged'
       },
 
@@ -77,10 +74,9 @@
       * The editor tab size
       */
       tabSize: {
-        value: 4,
-        type: Number,
-        reflectToAttribute: true,
-        observer: '_tabSizeChanged'
+       value: 4,
+       type: Number,
+       observer: '_tabSizeChanged'
       },
 
       /**
@@ -89,7 +85,6 @@
       theme: {
         value: 'monokai',
         type: String,
-        reflectToAttribute: true,
         observer: '_themeChanged'
       },
 
@@ -110,7 +105,6 @@
       wrap: {
         value: false,
         type: Boolean,
-        reflectToAttribute: true,
         observer: '_wrapChanged'
       },
     },
